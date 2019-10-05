@@ -14,12 +14,14 @@ package cse360assign2;
 public class AddingMachine 
 {
 	private int total;
+	private String history;
 	
-	//Constructor of AddingMachine, used to set the total to 0 when the class is
+	//Constructor of AddingMachine, used to set the total to 0 and history to "0" when the class is
 	//initalized
 	public AddingMachine ()
 	{
 		total = 0;  // not needed - included for clarity
+		history = "0";
 	}
 	
 	
@@ -30,30 +32,34 @@ public class AddingMachine
 	 */
 	public int getTotal () 
 	{
-		return 0;
+		return total;
 	}
 	
 	
 	/*
-	 * Adds the value given to the total of the process
+	 * Adds the value given to the total of the process and puts the operation
+	 * and value in to the history
 	 * 
 	 * @param value the integer value to add to the total
 	 */
 	
 	public void add (int value) 
 	{
-		
+		total += value;
+		history = history + " + " + value;
 	}
 	
 	
 	/*
-	 * Subtracts the value given from the total of the process
+	 * Subtracts the value given from the total of the process and puts the
+	 * operation and value into history
 	 * 
 	 * @param value the integer value to subtract from the total
 	 */
 	public void subtract (int value) 
 	{
-		
+		total -= value;
+		history = history + " - " + value;
 	}
 	
 	
@@ -61,11 +67,11 @@ public class AddingMachine
 	 * Provides the history of the operations with the corresponding
 	 * value that makes up the total of the process
 	 * 
-	 * @return str history of the operations with numbers 
+	 * @return history String of the history of the operations with numbers 
 	 */
 	public String toString () 
 	{
-		return "";
+		return history;
 	}
 	
 	
@@ -74,6 +80,7 @@ public class AddingMachine
 	 */
 	public void clear() 
 	{
-		
+		total = 0;
+		history = "0";
 	}
 }
