@@ -1,0 +1,79 @@
+package cse360assign2;
+
+/* @author Hunter Hosick
+ * CLASS ID: (70641) CSE360 9:40am-10:30am 
+ * ASSIGNMENT 2
+ * DESCRIPTION: This class is designed to add and subtract values
+ * 				given in the parameters of the functions, then upon
+ * 				request, get the total of the all the operations that
+ * 				occurred during the process. Additionally, the string should
+ * 				be the history of all the processes that occurred with the
+ * 				operation sign and the corresponding value.
+ */
+
+public class AddingMachine 
+{
+	private int total;
+	
+	//Constructor of AddingMachine, used to set the total to 0 when the class is
+	//initalized
+	public AddingMachine ()
+	{
+		total = 0;  // not needed - included for clarity
+	}
+	
+	
+	/*
+	 * Gets the total from all the operations that occurred
+	 * 
+	 * @return total the integer value of the sums and difference of all values
+	 */
+	public int getTotal () 
+	{
+		return 0;
+	}
+	
+	
+	/*
+	 * Adds the value given to the total of the process
+	 * 
+	 * @param value the integer value to add to the total
+	 */
+	
+	public void add (int value) 
+	{
+		
+	}
+	
+	
+	/*
+	 * Subtracts the value given from the total of the process
+	 * 
+	 * @param value the integer value to subtract from the total
+	 */
+	public void subtract (int value) 
+	{
+		
+	}
+	
+	
+	/*
+	 * Provides the history of the operations with the corresponding
+	 * value that makes up the total of the process
+	 * 
+	 * @return str history of the operations with numbers 
+	 */
+	public String toString () 
+	{
+		return "";
+	}
+	
+	
+	/*
+	 * Clears all of the operations done and the total
+	 */
+	public void clear() 
+	{
+		
+	}
+}
