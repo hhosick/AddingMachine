@@ -15,15 +15,13 @@ public class AddingMachine
 {
 	private int total;
 	private String history;
-	private boolean noHistory;
 	
 	//Constructor of AddingMachine, used to set the total to 0 and history to "0" when the class is
 	//initalized
 	public AddingMachine ()
 	{
 		total = 0;  // not needed - included for clarity
-		history = "";
-		noHistory = true;
+		history = "0";
 	}
 	
 	
@@ -46,14 +44,7 @@ public class AddingMachine
 	 */
 	
 	public void add (int value) 
-	{
-		//if there is no history then add 0 then the operation with value
-		if(noHistory == true)
-		{
-			history = history + "0";
-			noHistory = false;
-		}
-		
+	{		
 		total += value;
 		history = history + " + " + value;
 	}
@@ -67,13 +58,6 @@ public class AddingMachine
 	 */
 	public void subtract (int value) 
 	{
-		//if there is no history then add 0 then the operation with value
-		if(noHistory == true)
-		{
-			history = history + "0";
-			noHistory = false;
-		}
-		
 		total -= value;
 		history = history + " - " + value;
 	}
@@ -81,8 +65,7 @@ public class AddingMachine
 	
 	/*
 	 * Provides the history of the operations with the corresponding
-	 * value that makes up the total of the process. If there is no 
-	 * history then return an empty string
+	 * value that makes up the total of the process.
 	 * 
 	 * @return history String of the history of the operations with numbers 
 	 */
@@ -98,7 +81,6 @@ public class AddingMachine
 	public void clear() 
 	{
 		total = 0;
-		history = "";
-		noHistory = true;
+		history = "0";
 	}
 }
